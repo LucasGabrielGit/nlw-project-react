@@ -1,17 +1,9 @@
 import React from "react";
 import { Button } from "./components/Button";
+import { Home } from "./pages/Home";
 
 function App() {
-  return (
-    <h1>
-      <Button text="Olá" />
-      <Button text="Not found" />
-      <Button texts={["Lucas", "Sabrina"]} />
-      <Button />
-      <Button />
-      <Button />
-    </h1>
-  );
+  return <Home />;
 }
 
 export default App;
