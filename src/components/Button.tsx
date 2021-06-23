@@ -1,8 +1,8 @@
-type IProps = {
-  text?: string;
-  texts?: string[];
-};
+import { ButtonHTMLAttributes } from "react";
+import "../styles/button.scss";
 
-export function Button(props: IProps) {
-  return <button>{props.text || props.texts}</button>;
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+
+export function Button(props: ButtonProps) {
+  return <button className="button" {...props} />;
 }

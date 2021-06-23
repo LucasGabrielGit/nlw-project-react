@@ -1,22 +1,13 @@
 import illustrationImg from "../resources/assets/images/illustration.svg";
 import logoImg from "../resources/assets/images/logo.svg";
-import logoGoogle from "../resources/assets/images/google-logo.png";
 import { Button } from "../components/Button";
+import { useAuth } from "../hooks/useAuth";
+import { Link } from "react-router-dom";
 
 import "../styles/auth.scss";
-import { useHistory } from "react-router";
-import { useAuth } from "../hooks/useAuth";
 
-export function Home() {
-  const history = useHistory();
-  const { user, signInWithGoogle } = useAuth();
-  async function handleCreateRoom() {
-    if (!user) {
-      await signInWithGoogle();
-    }
-
-    history.push("/rooms/new");
-  }
+export function NewRoom() {
+  const user = useAuth();
 
   return (
     <div id="page-auth">
@@ -28,15 +19,15 @@ export function Home() {
       <main>
         <div className="main-content">
           <img src={logoImg} alt="Letmeask" />
-          <button className="create-room" onClick={handleCreateRoom}>
-            <img src={logoGoogle} alt="Logo do Google" />
-            Crie sua conta com o Google
-          </button>
-          <div className="separator">ou entre em uma sala</div>
+          <h2>Crie uma nova sala</h2>
           <form>
             <input type="text" placeholder="Digite o código da sala" />
-            <Button type="submit">Entrar na sala</Button>
+            <Button type="submit">Criar sala</Button>
           </form>
+          <p>
+            Quer entrar em uma sala já existente?{" "}
+            <Link to="/">Clique aqui</Link>
+          </p>
         </div>
       </main>
     </div>
