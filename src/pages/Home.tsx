@@ -3,9 +3,10 @@ import logoImg from "../resources/assets/images/logo.svg";
 import logoGoogle from "../resources/assets/images/google-logo.png";
 import { Button } from "../components/Button";
 
-import "../styles/auth.scss";
 import { useHistory } from "react-router";
 import { useAuth } from "../hooks/useAuth";
+
+import "../styles/auth.scss";
 
 export function Home() {
   const history = useHistory();
