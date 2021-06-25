@@ -1,5 +1,5 @@
 .button {
-  margin-top: 16px;
+  // margin-top: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,9 +14,7 @@
   border: 0;
   cursor: pointer;
   outline: 0;
-  // box-shadow: 1px 1px 5px 1px #333;
-  border-bottom: 0.1rem solid #333;
-  border-right: 0.1rem solid #333;
+  box-shadow: 2px 2px 0.02rem 0.01rem rgba(0, 0, 0, 0.2);
 
   transition: filter 0.2s;
   img {
